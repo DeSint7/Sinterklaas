@@ -1,0 +1,82 @@
+:root {
+  --rood: #c8102e;
+  --donkerrood: #8f0b21;
+  --goud: #d4a017;
+  --creme: #fff8e7;
+  --tekst: #3b2a1a;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--tekst);
+  /* Leg een afbeelding in de map images met de naam achtergrond.png (of .jpg, pas dan de naam hier aan) */
+  background:
+    url("../images/achtergrond.png") center / cover no-repeat,
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.08) 0 12px, transparent 13px) 0 0 / 60px 60px,
+    linear-gradient(160deg, var(--rood), var(--donkerrood));
+}
+.kaart {
+  width: 100%;
+  max-width: 440px;
+  text-align: center;
+  padding: 32px 28px 36px;
+  background: var(--creme);
+  border: 6px solid var(--goud);
+  border-radius: 18px;
+  box-shadow: 0 0 0 4px var(--donkerrood), 0 18px 40px rgba(0,0,0,.35);
+}
+.logo { max-width: 120px; max-height: 120px; margin-bottom: 8px; }
+h1 {
+  margin: 0 0 6px;
+  font-size: 2rem;
+  color: var(--rood);
+  letter-spacing: .5px;
+  text-shadow: 1px 1px 0 var(--goud);
+}
+.intro { margin: 0 0 22px; font-style: italic; }
+.invoer { display: flex; gap: 10px; justify-content: center; }
+input {
+  width: 140px;
+  padding: 12px;
+  font-size: 1.8rem;
+  text-align: center;
+  letter-spacing: 8px;
+  font-family: inherit;
+  color: var(--tekst);
+  background: #fff;
+  border: 3px solid var(--goud);
+  border-radius: 10px;
+}
+input:focus { outline: none; border-color: var(--rood); }
+button {
+  padding: 12px 22px;
+  font-size: 1.1rem;
+  font-family: inherit;
+  font-weight: bold;
+  color: #fff;
+  background: var(--rood);
+  border: 3px solid var(--goud);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .1s, background .2s;
+}
+button:hover { background: var(--donkerrood); }
+button:active { transform: scale(.96); }
+.melding { min-height: 1.4em; margin: 12px 0 0; color: var(--rood); font-weight: bold; }
+.qr { margin: 10px auto 0; display: inline-block; }
+.qr svg {
+  display: block;
+  width: 240px;
+  height: 240px;
+  padding: 10px;
+  background: #fff;
+  border: 4px solid var(--rood);
+  border-radius: 12px;
+}
+.qr-tekst { margin: 10px 0 0; font-weight: bold; color: var(--donkerrood); }
